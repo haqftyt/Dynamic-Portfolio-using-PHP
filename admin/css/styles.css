@@ -1,0 +1,95 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+/*navigation bar style in admin panel*/
+nav{
+    background-color:black;
+    color:white;
+    padding:20px 50px;
+    position: relative;
+}
+.logout a{
+    color:white;
+}
+.rightbar{
+    position:absolute;
+    left:80%;
+    top:15px;
+    width:200px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+/*vertical-navigation bar styling*/
+ .vertical-nav{
+    position:relative;
+    text-align: center;
+    padding-top:30px;
+    background-color:rgb(7, 213, 113);
+    width:300px;
+    height:89vh;
+    overflow-x: hidden;
+    transition: 0.3s;
+}
+ ul{
+    margin-top:20px;
+}
+ul i{
+    margin:0 5px;
+}
+#sidebar ul li:hover i{
+    color:white;
+}
+ul li {
+    font-size:18px;
+    padding:30px;
+    list-style-type: none;
+}
+li:hover{
+    background-color:black;
+    transition: 0.3s;
+}
+#sidebar ul li a{
+    text-decoration: none;
+    color:black;
+}
+#sidebar ul li:hover a{
+    text-decoration: none;
+    color:white;
+} */
+/*styling open navbar button*/
+#open{
+    position:absolute;
+    left:90%;
+    top:15px;
+}
+button{
+    padding:10px;
+    color:black;
+    background-color:yellow;
+}
+/*styling for close button in vertical bar*/
+.close{
+    position:absolute;
+    font-size:30px;
+    left:20px;
+    top:10px;
+    color:black;
+}
+.content{
+    width:100%;
+    height:89vh;
+    background-color:white;
+    color:black;
+    margin-left: 0;
+    transition: 0.1s;
+    overflow:scroll;
+}
+.container{
+    display: flex;
+}
+
+
