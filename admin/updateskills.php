@@ -11,22 +11,22 @@ if (isset($_POST['submit'])) {
   $oldimage = $_POST['old_image'];
   $newimage = $_FILES['image']['name'];
   $tmpname=$_FILES['image']['tmp_name'];
+  $newimagename= $newimage;
   if ($newimage != '') {
     $updatefile = $newimage;
   } else {
     $updatefile = $oldimage;
   }
-//   if (file_exists('../assets/img' . $newimage)) {
-//     echo "<script>alert('Image already exists')</script>";
-//   } 
-    $query = "UPDATE tb_about SET skillname='$skillname',percentage='$percentage',image='$updatefile'WHERE id='$id'";
+    $query = "UPDATE tb_skills SET skillname='$skillname',percentage='$percentage',image='$updatefile'WHERE id='$id'";
     $update = mysqli_query($connection, $query);
     if ($update) {
-      move_uploaded_file($tmpname,'../assets/img/'.$newimage);
+      move_uploaded_file($tmpname,'../assets/img/'.$newimagename);
+     if($newimage!= null){
       unlink('../assets/img/'.$oldimage);
+     }
       header('Location:../admin/');
     } else {
-      header('Location:../');
+      header('Location:../admin/');
     }
 }
 ?>

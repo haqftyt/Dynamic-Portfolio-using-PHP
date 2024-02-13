@@ -29,7 +29,9 @@ if (isset($_POST['submit'])) {
         $update = mysqli_query($connection, $query);
         if ($update) {
             move_uploaded_file($tmpname, '../assets/img/' . $newimage);
-            unlink('../assets/img/' . $oldimage);
+            if($newimage!= null){
+                unlink('../assets/img/'.$oldimage);
+               }
             header('Location:../admin/');
         } else {
             header('Location:../admin/');
